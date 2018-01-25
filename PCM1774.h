@@ -3,6 +3,7 @@
 
 #include <Arduino.h>
 #include <DTWI.h>
+#include <I2S.h>
 
 typedef struct {
     union {
@@ -17,7 +18,7 @@ typedef struct {
     } __attribute__((packed));
 } __attribute__((packed)) reg3d;
 
-class PCM1774 {
+class PCM1774 : public DAC {
 	private:
 
         DTWI *dtwi;

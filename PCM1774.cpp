@@ -44,7 +44,12 @@ void PCM1774::setGain(int8_t g) {
 
 void PCM1774::setDAC(uint8_t reg, uint8_t val) {
     uint8_t state = 0;
+    uint32_t ts = millis();
     while (1) {
+        if (millis() - ts >= 1000) {
+            dtwi->stopMaster();
+            return;
+        }
         switch (state) {
             case 0: // begin write
                 if (dtwi->startMasterWrite(0x47)) {

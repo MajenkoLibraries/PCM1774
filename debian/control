@@ -1,0 +1,20 @@
+Source: libpcm1774-chipkit
+Section: libraries
+XBSC-Family: pic32
+Priority: extra
+Maintainer: Matt Jenkins <matt@majenko.co.uk>
+XBSC-TieCore: chipkit
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.4
+
+Package: libpcm1774-chipkit
+Section: libraries
+Architecture: all
+XBSC-Group: Audio
+Depends: chipkit, libi2s-chipkit
+Recommends: 
+Provides: PCM1774.h
+Description: PCM1774 library for chipkit
+
+
+

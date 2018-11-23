@@ -1,0 +1,17 @@
+{
+    "name": "PCM1774",
+    "provides": "PCM1774.h",
+    "license": "LICENSE.md",
+    "readme": "README.md",
+    "description": "Control library for the PCM1774 I2S audio DAC",
+    "category": "Audio",
+    "subcategory": "CODEC",
+    "maintainer": "Matt Jenkins <matt@majenko.co.uk>",
+    "version": "1.0.4",
+    "family": "pic32",
+    "core": "chipkit",
+    "install": {
+        "PCM1774.cpp": "/",
+        "PCM1774.h": "/"
+    }
+}
